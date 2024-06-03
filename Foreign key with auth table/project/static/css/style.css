@@ -1,0 +1,35 @@
+.form-outer{
+    width:600px;
+    padding: 20px;
+    background-color: #ccc5b9;
+    border-radius: 25px;
+    box-shadow: #252422;
+}
+
+.navbar{
+    background-color: #252422;
+}
+
+body{
+    background-color: #eae3d8;
+}
+
+p{
+    color: rgb(1, 1, 1);
+}
+
+.buttn{
+    background-color: #252422;
+    color: snow;
+    
+}
+
+.buttn:hover{
+    
+    color: rgb(196, 196, 196);
+}
+
+.thead{
+    background-color: #252422;
+    color: snow;
+}

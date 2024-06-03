@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="container form-outer mt-5 shadow-lg my-3 py-3">
+    <h3 class="mb-4 text-center text-dark">Add Course</h3>
+    <form action="{% url 'c_add' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="text" name="cname"  placeholder="Course name" class="form-control">
+        </div>
+
+       <div class="text-center ">
+         <button class="btn buttn" type="submit">Add</button>
+       </div>
+
+        
+    </form>
+</div>
+
+<br>
+
+{% for message in messages %}
+    <div class="container w-50 text-center">
+        <div class="alert alert-info fade-out">{{ message }}</div>
+    </div>
+    {% endfor %}
+    
+    <script>
+        var alerts = document.querySelectorAll('.fade-out');
+        var fadeOutTime = 3000;
+        alerts.forEach(function(alert) {
+            setTimeout(function() {
+                alert.classList.add('fade');
+                alert.addEventListener('transitionend', function() {
+                    alert.parentNode.removeChild(alert);
+                });
+            }, fadeOutTime);
+        });
+    </script>
+
+
+{% endblock %}
